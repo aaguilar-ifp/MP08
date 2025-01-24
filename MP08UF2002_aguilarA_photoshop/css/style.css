@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.pagina{
+    position: relative;
+    height: 100%;
+}
+
+.p1{
+    background: yellow;
+}
+.p2{
+    background: red;
+}
+.p3{
+    background: blue;
+}
+
+.p2 ul{
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.p2 li {
+    width: 200px;
+    height: 200px;
+    background: darkblue;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    line-height: 200px;
+    border-radius: 50px;
+    float: left;
+    font-family:Arial, Helvetica, sans-serif;
+} 
+
+.p1 li:hover {
+    background: lightblue;
+    color: black;
+    scale: 115%;
+    transition: 1s;
+    animation: 1s rebotar linear 3;
+}   
+
+@keyframes rebotar {
+    0%{
+        transform: translateY(0px);
+    }
+
+    25%{
+        transform: translateY(10px);
+    }
+
+    50%{
+        transform: translateY(0px);
+    }
+
+    75%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}

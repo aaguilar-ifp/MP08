@@ -1,0 +1,79 @@
+        .taulell{
+            width: 800px;
+            height: 800px;
+            padding: 15px;
+            background-color: blue;
+            margin: auto;
+            box-shadow: 10px 10px 35px red;
+        }
+        .contenidor{
+            height: 100px;
+            background: ivory;
+            width: 800px;
+            padding: 0px;
+            margin: 0 auto;
+        }
+        .casella{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            background-image: linear-gradient(45deg,ivory,yellow);
+            float: left;
+        }
+
+        .contenidor:nth-child(2n-1) .casella:nth-child(2n){
+            background-color: black;
+            background-image: linear-gradient(grey,black);
+        }
+        .contenidor:nth-child(2n) .casella:nth-child(2n-1){
+            background-color: black;
+            background-image: linear-gradient(grey,black);
+        }
+        .contenidor:nth-child(8) .fitxa:hover{
+            position: relative;
+            bottom: 200px;
+            transition: 1s;
+        }
+        .contenidor:nth-child(7) .fitxa:hover{
+            position: relative;
+            bottom: 100px;
+            transition: 1s;
+        }
+         .contenidor:nth-child(2) .fitxa:hover{
+            position: relative;
+            top: 100px;
+            transition: 1s;
+        }
+        .contenidor:nth-child(1) .fitxa:hover{
+            position: relative;
+            top: 200px;
+            
+        }
+        .fitxa{
+            background-color: grey;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            margin: 10px;
+            box-shadow: inset 4px 4px 32px grey  ;
+        }
+        
+      
+
+        .contenidor:nth-child(1) .fitxa, .contenidor:nth-child(2) .fitxa {
+            background-color: yellow;
+            background-image: linear-gradient(yellow, blue, red);
+            
+        }
+        .contenidor:nth-child(7) .fitxa, .contenidor:nth-child(8) .fitxa {
+            background-color: brown;
+            background-image: radial-gradient(	WhiteSmoke,Beige);
+        }
+
+
+
+
+        
+
+    
+    

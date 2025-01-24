@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 166px;
+}
+
+nav{
+    height: 180px;
+
+}
+
+
+
+.contenidor {
+    width: 1716px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+.entrada{
+    width: 536px;
+    height: 620px;
+    margin: 18px;
+
+    float: left;
+    text-align: center;
+}
+.img {
+    width:536px;
+    height: 536px;
+}
+
+.reaccions {
+    background: white;
+    height: 84px;
+    overflow: hidden;
+}
+.cercle{
+    height: 80px;
+    width: 80px; 
+    border-radius: 50%;
+    background-color: blue;
+    display: inline-block;
+    margin: 28px;
+    padding: 10px;
+    border: solid 5px white;
+    box-shadow: 0px 0px 20px blue;
+    background-image: url(../img/anuel\ .jpeg);
+    background-size: 115%;
+    background-repeat: no-repeat;
+    float: left;
+}
+.cercle:first-child::after {
+    content: "+";
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    border: solid 5px white;
+    position: relative;
+    top: 60px;
+    left: 65px;
+}
+
+.cercle:hover {
+    opacity: 80%;
+}
+
+.fotoautor{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/anuel\ .jpeg);
+    padding: 10px;
+    margin: 10px;
+    border: solid 5px white;
+    box-shadow: 0px 0px 10px blue;
+    float: left;
+}
+
+.autor {
+    width: 268px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 200;
+    font-size: 22px;
+}
+
+.moment {
+    width:268px;
+    color: gainsboro;
+    font-size: 20px;
+}
+
+.esquerre {
+    width: 40%;
+    margin: 0;
+    background: white;
+    float: left;
+    overflow: hidden;
+}
+
+.dreta {
+    width: 60%;
+    margin: 0;
+    float: right;
+
+}
+
+.comentari{
+    width: 180px;
+    height: 40px;;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    float: left;
+}
+
+.like{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    float: left;
+}
+
+.mes{
+    height: 30px;
+    width: 30px;
+    float: left;
+    line-height: 30px ;
+}
+/*_________elements header___________*/
+
+.home {
+    width: 208px;
+    height: 39px;
+    background-size: auto ;
+    background-repeat: no-repeat ;
+    background-image: url(../img/ifpagram_01.jpg);
+    display: inline-block;
+    margin: 50px 0 0;
+}
+
+.menu{
+    width: 320px;
+    height: 32px;
+    margin: 50px 450px 0 450px;
+    display: inline-block;
+    padding: 0;
+}
+
+
+.menu li{
+    width: 32px;
+    height: 32px;
+    margin: 3px 8px;
+    display: inline-block;
+    background-image: url(../img/ifpagram_02.jpg);
+}
+.menu .inici{
+  
+    background-position: -6px -1px;
+}
+.menu .cerca{
+    background-position: -94px -2px ;
+
+}
+.menu .rels{
+    background-position: -178px -2px ;
+  
+}
+
+.menu .favorit{
+    background-position: -262px -2px ;
+   
+}
+.perfil{
+    width: 208px;
+    height: 32px ;
+    margin:  50px 0 0px;
+    background-color: red;
+    display: inline-block;
+}

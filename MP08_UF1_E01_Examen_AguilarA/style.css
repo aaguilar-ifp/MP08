@@ -1,0 +1,80 @@
+/* Fonts i colors generals */
+body {
+    font-family: Helvetica, Sans-serif;
+    background-color: #222;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra superior */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.5);
+    padding: 5px 20px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    font-size: 18px;
+}
+
+nav a {
+    color: #CCC;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+}
+
+.socials a {
+    color: #CCC;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Contenidor principal */
+main {
+    margin-top: 60px; /* Per evitar que el contingut s’amagui sota la barra */
+    padding: 20px;
+}
+
+/* Seccions */
+.seccio {
+    margin-bottom: 40px;
+}
+
+.seccio h2 {
+    color: #FFF;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.fitxa {
+    width: 175px;
+    margin: 0 10px 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #CCC;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.fitxa:hover {
+    opacity: 0.5;
+}
+
+/* Contingut vist en escala de grisos */
+.vist {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
