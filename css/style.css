@@ -112,9 +112,10 @@ h1 {
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas */
   gap: 20px; /* Espaciado entre los cuadros */
-  justify-items: center; /* Centra los cuadros dentro de sus celdas */
+  justify-items: center; /* Centra los cuadros dentro de las celdas */
   padding-top: 100px; /* Añadir algo de espacio arriba */
   padding-bottom: 50px; /* Añadir algo de espacio abajo */
   min-height: 600px; /* Asegura que la página tenga suficiente altura */
@@ -122,8 +123,8 @@ h1 {
 
 .p2 li {
   text-align: center;
-  width: 200px;
-  height: 200px; /* Fijamos la altura para que todos los cuadros tengan la misma dimensión */
+  width: 200px; /* Fijamos la dimensión de los cuadrados */
+  height: 200px;
   font-size: 1.25rem;
   color: white;
   line-height: 9.375rem;
