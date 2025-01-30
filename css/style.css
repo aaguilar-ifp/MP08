@@ -146,21 +146,20 @@ h1 {
 
 .p2 ul {
   width: 100%;
-  height: auto;
   margin: 0 auto;
   padding-top: 50px;
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
-  justify-content: center; /* Centra los elementos horizontalmente */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   gap: 20px; /* Espaciado entre los cuadros */
+  justify-items: center; /* Centra los cuadros dentro de sus celdas */
 }
 
 .p2 li {
   text-align: center;
   width: 200px;
-  height: auto; /* Ajusta la altura de manera flexible */
+  height: 200px; /* Fijamos la altura para que todos los cuadros tengan la misma dimensión */
   font-size: 1.25rem;
   color: white;
   line-height: 9.375rem;
