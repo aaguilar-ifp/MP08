@@ -122,23 +122,23 @@ h1 {
 }
 
 .p2 li {
-  text-align: center;
-  width: 200px; /* Fijamos la dimensión de los cuadrados */
-  height: 200px;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 9.375rem;
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  padding: 20px;
-  background-color: red;
-  transition: background-color 0.3s ease;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Centra el texto horizontalmente dentro de cada cuadro. */
+  width: 200px; /* Fija el ancho de cada cuadro a 200px. */
+  height: 200px; /* Fija la altura de cada cuadro a 200px. */
+  font-size: 1.25rem; /* Establece el tamaño del texto a 1.25rem. */
+  color: white; /* El color del texto será blanco. */
+  line-height: 9.375rem; /* Establece la altura de la línea, lo que permite alinear el texto verticalmente en el centro. */
+  font-family: Arial, Helvetica, sans-serif; /* Define la fuente para el texto. */
+  position: relative; /* Posiciona los elementos de manera relativa dentro de su contenedor. */
+  padding: 20px; /* Aplica un relleno de 20px dentro de cada cuadro. */
+  background-color: red; /* Establece el color de fondo de los cuadros a rojo. */
+  transition: background-color 0.3s ease; /* Añade una transición suave de 0.3 segundos para el cambio de color de fondo. */
+  box-sizing: border-box; /* Asegura que el relleno no afecte el tamaño total de los cuadros. */
+  display: flex; /* Aplica un modelo de caja flexible para alinear los elementos internos de manera eficiente. */
+  justify-content: center; /* Centra el contenido horizontalmente dentro del cuadro. */
+  align-items: center; /* Centra el contenido verticalmente dentro del cuadro. */
+  text-align: center; /* Centra el texto dentro de cada cuadro. */
+  border-radius: 10px; /* Añade bordes redondeados a los cuadros. */
 }
 
 /* Cambio de color al pasar el ratón */
