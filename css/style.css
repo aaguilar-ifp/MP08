@@ -97,39 +97,6 @@ h1 {
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  -webkit-animation: run 7s 0s infinite;
-  animation: run 7s 0s infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-
-.p1 .lines .line:nth-child(1) {
-  margin-left: -25%;
-}
-
-.p1 .lines .line:nth-child(1)::after {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.p1 .lines .line:nth-child(3) {
-  margin-left: 25%;
-}
-
-.p1 .lines .line:nth-child(3)::after {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-
-@-webkit-keyframes run {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
 }
 
 @keyframes run {
@@ -144,13 +111,13 @@ h1 {
 /* ------- pagina DOS ---------- */
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
-  min-height: 600px; /* Ajusta la altura mínima de la página */
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
   gap: 20px; /* Espaciado entre los cuadros */
   justify-items: center; /* Centra los cuadros dentro de sus celdas */
   padding-top: 100px; /* Añadir algo de espacio arriba */
   padding-bottom: 50px; /* Añadir algo de espacio abajo */
+  min-height: 600px; /* Asegura que la página tenga suficiente altura */
 }
 
 .p2 li {
@@ -186,24 +153,6 @@ h1 {
 /*--------pagina 3-----*/
 .p3 {
   background: #dcd0ea;
-}
-
-@keyframes rebotar {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  75% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 a {
