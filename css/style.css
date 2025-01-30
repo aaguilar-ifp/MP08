@@ -11,7 +11,7 @@ html, body{
   font-style: normal;
   overflow-x:hidden ;
 }
-nav{
+nav {
   position: fixed;
   height: 50px;
   top: 0;
@@ -19,17 +19,27 @@ nav{
   right: 0;
   background: blue;
   z-index: 1000;
-  text-align: center;
   color: white;
-}
-nav ul{
-  display: inline-block;
   text-align: center;
-  margin: 15px auto;
 }
-nav li{
-  padding: 0px 20px 0px 20px;
+
+nav ul {
+  display: grid; /* Cambiar a grid para organizar los items en columnas */
+  grid-template-columns: repeat(3, 1fr); /* Definir 3 columnas */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 100%;
 }
+
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
 h1{
   padding-top: 100px;
   text-align: center;
