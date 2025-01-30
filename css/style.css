@@ -148,6 +148,7 @@ nav li{
   height: 200px;
   font-size: 1.25rem;
   color: white;
+  height: fit-content;
   line-height: 9.375rem;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
