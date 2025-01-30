@@ -21,18 +21,20 @@ nav {
   right: 0;
   background: blue;
   z-index: 1000;
-  text-align: center;
+  display: flex;
+  justify-content: center;  /* Centra los elementos horizontalmente */
+  align-items: center;      /* Centra los elementos verticalmente */
   color: white;
 }
 
 nav ul {
-  display: inline-block;
-  text-align: center;
-  margin: 15px auto;
+  display: flex;  /* Alinea los elementos de manera horizontal */
+  margin: 0;
 }
 
 nav li {
   padding: 0px 20px 0px 20px;
+  text-align: center;
 }
 
 h1 {
@@ -142,18 +144,13 @@ h1 {
 /* ------- pagina DOS ---------- */
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
-}
-
-.p2 ul {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 50px;
-  list-style-type: none;
-  padding: 0;
+  min-height: 600px; /* Ajusta la altura mínima de la página */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   gap: 20px; /* Espaciado entre los cuadros */
   justify-items: center; /* Centra los cuadros dentro de sus celdas */
+  padding-top: 100px; /* Añadir algo de espacio arriba */
+  padding-bottom: 50px; /* Añadir algo de espacio abajo */
 }
 
 .p2 li {
@@ -168,6 +165,12 @@ h1 {
   padding: 20px;
   background-color: red;
   transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px; /* Bordes redondeados */
 }
 
 /* Cambio de color al pasar el ratón */
@@ -255,7 +258,4 @@ a {
   p {
     columns: 2;
   }
-}
-.line{
-  
 }
