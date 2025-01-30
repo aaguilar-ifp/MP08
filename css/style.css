@@ -118,7 +118,7 @@ h1 {
   justify-items: center; /* Centra los cuadros dentro de cada celda */
   padding-top: 100px; /* Espacio adicional en la parte superior */
   padding-bottom: 50px; /* Espacio adicional en la parte inferior */
-  min-height: 600px; /* Asegura que la página tenga una altura mínima de 600px */
+  min-height: 1000px; /* Asegura que la página tenga una altura mínima de 600px */
 }
 
 .p2 ul {
@@ -155,6 +155,7 @@ h1 {
 
 /*--------pagina 3-----*/
 .p3 {
+  background: #dcd0ea;
 }
 
 a {
