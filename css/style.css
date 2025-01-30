@@ -110,40 +110,44 @@ h1 {
 
 /* ------- pagina DOS ---------- */
 .p2 {
-  background: linear-gradient(#171717, #93d6cb, #dcd0ea);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  grid-template-rows: repeat(3, 1fr); /* 3 filas */
+  background: linear-gradient(#171717, #93d6cb, #dcd0ea); /* Fondo degradado */
+  display: grid; /* Usamos el modelo de cuadrícula */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas de tamaño igual */
   gap: 20px; /* Espaciado entre los cuadros */
-  justify-items: center; /* Centra los cuadros dentro de las celdas */
-  padding-top: 100px; /* Añadir algo de espacio arriba */
-  padding-bottom: 50px; /* Añadir algo de espacio abajo */
-  min-height: 600px; /* Asegura que la página tenga suficiente altura */
+  justify-items: center; /* Centra los cuadros dentro de cada celda */
+  padding-top: 100px; /* Espacio adicional en la parte superior */
+  padding-bottom: 50px; /* Espacio adicional en la parte inferior */
+  min-height: 600px; /* Asegura que la página tenga una altura mínima de 600px */
+}
+
+.p2 ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: contents; /* Asegura que los elementos de la lista se muestren directamente sin el contenedor de la lista */
 }
 
 .p2 li {
-  text-align: center; /* Centra el texto horizontalmente dentro de cada cuadro. */
-  width: 200px; /* Fija el ancho de cada cuadro a 200px. */
-  height: 200px; /* Fija la altura de cada cuadro a 200px. */
-  font-size: 1.25rem; /* Establece el tamaño del texto a 1.25rem. */
-  color: white; /* El color del texto será blanco. */
-  line-height: 9.375rem; /* Establece la altura de la línea, lo que permite alinear el texto verticalmente en el centro. */
-  font-family: Arial, Helvetica, sans-serif; /* Define la fuente para el texto. */
-  position: relative; /* Posiciona los elementos de manera relativa dentro de su contenedor. */
-  padding: 20px; /* Aplica un relleno de 20px dentro de cada cuadro. */
-  background-color: red; /* Establece el color de fondo de los cuadros a rojo. */
-  transition: background-color 0.3s ease; /* Añade una transición suave de 0.3 segundos para el cambio de color de fondo. */
-  box-sizing: border-box; /* Asegura que el relleno no afecte el tamaño total de los cuadros. */
-  display: flex; /* Aplica un modelo de caja flexible para alinear los elementos internos de manera eficiente. */
-  justify-content: center; /* Centra el contenido horizontalmente dentro del cuadro. */
-  align-items: center; /* Centra el contenido verticalmente dentro del cuadro. */
-  text-align: center; /* Centra el texto dentro de cada cuadro. */
-  border-radius: 10px; /* Añade bordes redondeados a los cuadros. */
+  width: 200px; /* Fijamos la dimensión de los cuadrados */
+  height: 200px;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 9.375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding: 20px;
+  background-color: red; /* Color inicial de los cuadrados */
+  transition: background-color 0.3s ease; /* Transición suave */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Cambio de color al pasar el ratón */
 .p2 li:hover {
-  background-color: blue;
+  background-color: blue; /* Cambio de color al pasar el ratón */
 }
 
 .p2 li:hover::after {
