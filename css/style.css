@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box !important;
 }
-
 html, body{
   height:100%;
   font-family: 'Times New Roman', Times, serif;
@@ -12,9 +11,8 @@ html, body{
   font-style: normal;
   overflow-x:hidden ;
 }
-
 nav{
-  position: fixed; 
+  position: fixed;
   height: 50px;
   top: 0;
   left: 0;
@@ -32,7 +30,6 @@ nav ul{
 nav li{
   padding: 0px 20px 0px 20px;
 }
-
 h1{
   padding-top: 100px;
   text-align: center;
@@ -50,7 +47,6 @@ h1{
   height: 100%;
 }
 /* ------- pagina UNO ---------- */
-
 .p1 {
   display: table;
   width: 100%;
@@ -61,7 +57,6 @@ h1{
   overflow: hidden;
   height: 700px;
 }
-
 .p1 .lines {
   position: absolute;
   top: 0;
@@ -71,7 +66,7 @@ h1{
   margin: auto;
   width: 90vw;
 }
-.p1   .lines .line {
+.p1 .lines .line {
   position: absolute;
   width: 1px;
   height: 100%;
@@ -91,50 +86,46 @@ h1{
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
   -webkit-animation: run 7s 0s infinite;
-          animation: run 7s 0s infinite;
+  animation: run 7s 0s infinite;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 }
 .p1 .lines .line:nth-child(1) {
   margin-left: -25%;
 }
 .p1 .lines .line:nth-child(1)::after {
   -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .p1 .lines .line:nth-child(3) {
   margin-left: 25%;
 }
 .p1 .lines .line:nth-child(3)::after {
   -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 @-webkit-keyframes run {
   0% {
-    top: -50%;
-  }
+      top: -50%;
+ }
   100% {
-    top: 110%;
-  }
+      top: 110%;
+ }
 }
-
 @keyframes run {
   0% {
-    top: -50%;
-  }
+      top: -50%;
+ }
   100% {
-    top: 110%;
-  }
+      top: 110%;
+ }
 }
-
 /* ------- pagina DOS ---------- */
-
 .p2 {
   background: linear-gradient(#171717, #93d6cb,#dcd0ea);
 }
-
 .p2 ul{
   width: 960px;
   height: 500px;
@@ -142,124 +133,102 @@ h1{
   padding-top: 50px;
   list-style-type: none;
   padding: 0;
-
 }
 nav li{
   display: inline;
   margin: auto ;
   background-color: #dcd0ea;
-
-}
-.p2 ul {
-list-style-type: none;
-padding: 0;
 }
 
 .p2 li {
-display: inline-block;
-margin: 50px;
-text-align: center;
-width: 200px;
-height: 200px;
-font-size: 1.25rem;
-color: white;
-line-height: 9.375rem;
-font-family: Arial, Helvetica, sans-serif;
-position: relative;
-padding: 20px;
-background-color: red; /* Color inicial de los cuadrados */
-transition: background-color 0.3s ease; /* Transición suave */
+  display: inline-block;
+  margin: 50px;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 9.375rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding: 20px;
+  background-color: red;
+ /* Color inicial de los cuadrados */
+  transition: background-color 0.3s ease;
+ /* Transición suave */
 }
-
 /* Cambio de color al pasar el ratón */
 .p2 li:hover {
-background-color: blue; /* Color al pasar el ratón */
+  background-color: blue;
+ /* Color al pasar el ratón */
 }
-
 .p2 li:hover::after {
-width: 900%;
-height: 800%;
+  width: 900%;
+  height: 800%;
 }
-
 /*--------pagina 3-----*/
 .p3 {
-background: #dcd0ea;
+  background: #dcd0ea;
 }
-
 @keyframes rebotar {
   0%{
       transform: translateY(0px);
-  }
-
+ }
   25%{
       transform: translateY(10px);
-  }
-
+ }
   50%{
       transform: translateY(0px);
-  }
-
+ }
   75%{
       transform: translateY(10px);
-  }
-
+ }
   100%{
       transform: translateY(0px);
-  }
+ }
 }
 a{
   color: red;
   text-decoration: none;
 }
-
 /*medidas smartphone*/
-
 @keyframes analitzador{
-to {
-    scale: 1 1;
+  to {
+      scale: 1 1;
+ }
 }
-}
-
 @media screen and (max-width: 480px){
-/*aqui va el disseny smartphone*/
+ /*aqui va el disseny smartphone*/
+  body{
+      background: var(--color1);
+ }
+  h1{
+      font-size: 1rem;
+ }
+ .p2 li {
+  width: 300px;
+  height: 300px;
 
-body{
-    background: var(--color1);
 }
-
-h1{
-    font-size: 1rem;
 }
-}
-
-
 @media screen and (min-width: 481px) and (max-width: 1279px){
-
-/*aqui va el disseny tablet*/
-
-body{
-    background: var(--color2);
+ /*aqui va el disseny tablet*/
+  body{
+      background: var(--color2);
+ }
+  h1{
+      font-size: 2rem;
+ }
 }
-h1{
-    font-size: 2rem;
-}
-}
-
-
-
 @media screen and (min-width: 1280px) {
-
-/*aqui va el disseny ordinador*/
-
-body{
-    background:var(--color3);
-}
-
-h1{
-    font-size: 4rem;
-}
-
-p{
-columns: 2;  
-}
+ /*aqui va el disseny ordinador*/
+  body{
+      background:var(--color3);
+ }
+  h1{
+      font-size: 4rem;
+ }
+  p{
+      columns: 2;
+ }
 }
