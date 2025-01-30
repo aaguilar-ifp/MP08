@@ -127,7 +127,7 @@ h1 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
 }
 .p2 ul {
-  width: 960px;
+  width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
   height: auto;
   margin: 0 auto;
   padding-top: 50px;
@@ -136,19 +136,12 @@ h1 {
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
   justify-content: center; /* Centra los elementos */
+  gap: 20px; /* Añadimos un pequeño espacio entre los cuadros */
 }
-nav li {
-  display: inline;
-  margin: auto;
-  background-color: #dcd0ea;
-}
-
 .p2 li {
   display: flex; /* Usamos flexbox para que los elementos se ajusten bien */
   justify-content: center;
   align-items: center;
-  margin: 50px;
-  text-align: center;
   width: 200px;
   height: 200px;
   font-size: 1.25rem;
@@ -206,6 +199,7 @@ a {
   }
   .p2 ul {
     width: 100%;
+    padding: 0 10px; /* Añadimos un pequeño relleno para evitar que los elementos lleguen hasta el borde */
   }
   .p2 li {
     width: 150px; /* Ajusta el tamaño de los cuadros */
