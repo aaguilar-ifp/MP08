@@ -1,6 +1,6 @@
 /* Reset y configuración base */
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box !important;
 }
@@ -23,25 +23,23 @@ nav {
   right: 0;
   background: blue;
   z-index: 1000;
-  color: white;
-  text-align: center;
-}
-
-nav ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  height: 100%;
-}
-
-nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px; /* Espaciado entre los elementos */
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  color: white;
   font-size: 1.25rem;
   padding: 10px;
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
 }
 
 /* ----- Página 1 (Animación de líneas) ----- */
@@ -54,6 +52,7 @@ nav li {
   font-family: sans-serif;
   overflow: hidden;
   height: 700px;
+  position: relative;
 }
 
 .p1 .lines {
@@ -104,43 +103,33 @@ nav li {
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta a móviles */
   gap: 20px;
   justify-items: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 20px 50px; /* Espaciado para que no se sobresalga */
   min-height: 100vh;
 }
 
 .p2 ul {
-  width: 960px;
-  height: 500px;
-  margin: 0 auto;
-  padding-top: 50px;
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: contents;
 }
 
 .p2 li {
-  text-align: center;
   width: 200px;
   height: 200px;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 9.375rem;
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  padding: 20px;
   background-color: red;
-  transition: background-color 0.3s ease;
-  box-sizing: border-box;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: Arial, sans-serif;
   border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .p2 li:hover {
@@ -158,46 +147,31 @@ a {
 }
 
 /* -------- Estilos responsivos -------- */
-@media screen and (max-width: 390px) {
-  body {
-    background: var(--color1);
-  }
-
-  h1 {
-    font-size: 1rem;
+@media screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
   }
 
   .p2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
     padding: 80px 10px 30px;
   }
 
   .p2 li {
-    width: 140px;
-    height: 140px;
+    width: 140%; /* Reducimos tamaño de los cuadrados */
+    height: 140%;
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 1279px) {
-  body {
-    background: var(--color2);
-  }
-
-  h1 {
-    font-size: 2rem;
+@media screen and (min-width: 768px) {
+  .p2 {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
   }
 }
 
 @media screen and (min-width: 1280px) {
-  body {
-    background: var(--color3);
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  p {
-    columns: 2;
+  .p2 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
