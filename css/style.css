@@ -170,9 +170,9 @@ h1 {
 }
 
 .p2 li {
-  width: 200px; /* Cuadrados de 200px */
-  height: 200px; /* Cuadrados de 200px */
-  background-color: red; /* Restaurado el color rojo */
+  width: 200px; 
+  height: 200px; 
+  background-color: red; 
   color: white;
   display: flex;
   justify-content: center;
@@ -195,7 +195,7 @@ h1 {
   height: 800%;
 }
 
-/* ----- Página 3 ----- */
+/* -------- Página 3 ----- */
 .p3 {
   background: #dcd0ea;
   display: flex;
@@ -209,7 +209,7 @@ h1 {
 .contact-title {
   font-size: 3rem;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #4e4e4e; /* Color de texto oscuro que combina con #dcd0ea */
   text-align: center;
   margin-top: 50px;
   cursor: pointer;
@@ -258,6 +258,7 @@ h1 {
   text-align: center;
   font-size: 1rem;
   font-family: Arial, sans-serif;
+  color: #4e4e4e; /* Color de texto para los iconos, igual que el título */
 }
 
 .contact-toggle:checked + .container {
