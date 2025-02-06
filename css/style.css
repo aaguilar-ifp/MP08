@@ -148,10 +148,9 @@ h1 {
   }
 }
 
-
-/* ----- Página 2 ----- */
+/* pagina 2 */
 .p2 {
-  background: linear-gradient(#171717, #93d6cb, #dcd0ea); /* Fondo restaurado */
+  background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -169,10 +168,14 @@ h1 {
   display: contents;
 }
 
+.p2 a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
 .p2 li {
-  width: 200px; 
-  height: 200px; 
-  background-color: red; 
+  width: 200px;
+  height: 200px;
+  background-color: red;
   color: white;
   display: flex;
   justify-content: center;
@@ -187,7 +190,7 @@ h1 {
 }
 
 .p2 li:hover {
-  background-color: blue; /* Cambia de color al hacer hover */
+  background-color: blue;
 }
 
 .p2 li:hover::after {
@@ -199,7 +202,7 @@ h1 {
 .p3 {
   background: #dcd0ea;
   display: flex;
-  flex-direction: column; /* Asegura que los elementos se alineen de arriba a abajo */
+  flex-direction: column; /* los elementos se alineen de arriba a abajo */
   justify-content: center;
   align-items: center;
   gap: 20px;
