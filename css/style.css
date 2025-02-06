@@ -203,12 +203,33 @@ h1 {
   padding-bottom: 50px;
 }
 
+/* Contacta conmigo título */
+.contact-title {
+  font-size: 3rem; /* Mismo tamaño que el título "Benvinguts!" */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px grey;
+}
+
+/* Estilo para el checkbox invisible */
+.contact-toggle {
+  display: none;
+}
+
+/* Contenedor de las redes sociales */
 .container {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-top: 20px;
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Empieza oculto */
 }
 
+/* Iconos de redes sociales */
 .icon-box {
   width: 200px; /* Tamaño fijo del cuadrado */
   height: 200px; /* Tamaño fijo del cuadrado */
@@ -238,6 +259,11 @@ h1 {
   text-align: center;
   font-size: 1rem;
   font-family: Arial, sans-serif;
+}
+
+/* Cuando el checkbox está marcado, mostramos las redes sociales */
+.contact-toggle:checked + .container {
+  opacity: 1; /* Hace que las redes sociales sean visibles */
 }
 
 /* medidas smartphone */
