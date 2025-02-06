@@ -197,41 +197,47 @@ h1 {
   background: #dcd0ea;
   display: flex;
   justify-content: center;
-  padding: 50px;
+  align-items: center;
+  gap: 20px; /* Espaciado entre los iconos */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .icon-box {
-  background-color: #fff;
+  width: 200px; /* Tamaño fijo del cuadrado */
+  height: 200px; /* Tamaño fijo del cuadrado */
+  background-color: #171717;
+  color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  flex-direction: column; /* Coloca la imagen y el texto uno debajo del otro */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.icon-box img {
+  width: 100px; /* Ajustamos el tamaño de las imágenes */
+  height: 100px; /* Ajustamos el tamaño de las imágenes */
+  object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
 }
 
 .icon-box:hover {
-  transform: translateY(-10px);
-}
-
-.material-icons {
-  font-size: 48px;
-  color: #555;
+  background-color: blue; /* Cambio de color al pasar el ratón */
 }
 
 .icon-box p {
   margin-top: 10px;
-  font-size: 14px;
-  color: #333;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
 /* medidas smartphone */
