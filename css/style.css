@@ -199,11 +199,13 @@ h1 {
 .p3 {
   background: #dcd0ea;
   display: flex;
+  flex-direction: column; /* Asegura que los elementos se alineen de arriba a abajo */
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 100vh; /* Asegura que la página tenga al menos el tamaño de la pantalla */
 }
 
 .contact-title {
@@ -211,9 +213,9 @@ h1 {
   font-family: 'Poppins', sans-serif;
   color: #4e4e4e; /* Color de texto oscuro que combina con #dcd0ea */
   text-align: center;
-  margin-top: 50px;
   cursor: pointer;
   text-shadow: 1px 1px 2px grey;
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
 .contact-toggle {
@@ -260,6 +262,11 @@ h1 {
   font-family: Arial, sans-serif;
   color: #4e4e4e; /* Color de texto para los iconos, igual que el título */
 }
+
+.contact-toggle:checked + .container {
+  opacity: 1;
+}
+
 
 .contact-toggle:checked + .container {
   opacity: 1;
