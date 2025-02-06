@@ -216,6 +216,12 @@ h1 {
   cursor: pointer;
   text-shadow: 1px 1px 2px grey;
   margin-bottom: 20px; /* Espacio debajo del título */
+  
+  /* Estilos para el rectángulo */
+  background-color: #b0a7d8; /* Color de fondo suave */
+  padding: 20px 40px; /* Espaciado dentro del rectángulo */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .contact-toggle {
@@ -268,9 +274,7 @@ h1 {
 }
 
 
-.contact-toggle:checked + .container {
-  opacity: 1;
-}
+
 
 @media screen and (max-width: 480px) {
   body {
