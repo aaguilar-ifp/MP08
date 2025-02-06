@@ -40,6 +40,7 @@ nav li {
   align-items: center;
   font-size: 1.25rem;
   padding: 10px;
+  text-decoration: none; /* Quitamos las rayas azules */
 }
 
 h1 {
@@ -70,80 +71,6 @@ h1 {
   font-family: sans-serif;
   overflow: hidden;
   height: 700px;
-}
-
-.p1 .lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: auto;
-  width: 90vw;
-}
-
-.p1 .lines .line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
-.p1 .lines .line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 15vh;
-  width: 100%;
-  top: -50%;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  -webkit-animation: run 7s 0s infinite;
-  animation: run 7s 0s infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-
-.p1 .lines .line:nth-child(1) {
-  margin-left: -25%;
-}
-
-.p1 .lines .line:nth-child(1)::after {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.p1 .lines .line:nth-child(3) {
-  margin-left: 25%;
-}
-
-.p1 .lines .line:nth-child(3)::after {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-
-@-webkit-keyframes run {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
-}
-
-@keyframes run {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
 }
 
 /* ------- pagina DOS ---------- */
@@ -198,14 +125,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaciado entre los iconos */
+  gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* Contacta conmigo título */
 .contact-title {
-  font-size: 3rem; /* Mismo tamaño que el título "Benvinguts!" */
+  font-size: 3rem;
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
@@ -214,44 +140,41 @@ h1 {
   text-shadow: 1px 1px 2px grey;
 }
 
-/* Estilo para el checkbox invisible */
 .contact-toggle {
   display: none;
 }
 
-/* Contenedor de las redes sociales */
 .container {
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin-top: 20px;
   transition: opacity 0.5s ease;
-  opacity: 0; /* Empieza oculto */
+  opacity: 0;
 }
 
-/* Iconos de redes sociales */
 .icon-box {
-  width: 200px; /* Tamaño fijo del cuadrado */
-  height: 200px; /* Tamaño fijo del cuadrado */
+  width: 200px;
+  height: 200px;
   background-color: #171717;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Coloca la imagen y el texto uno debajo del otro */
+  flex-direction: column;
   border-radius: 10px;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
 }
 
 .icon-box img {
-  width: 100px; /* Ajustamos el tamaño de las imágenes */
-  height: 100px; /* Ajustamos el tamaño de las imágenes */
-  object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .icon-box:hover {
-  background-color: blue; /* Cambio de color al pasar el ratón */
+  background-color: blue;
 }
 
 .icon-box p {
@@ -261,16 +184,8 @@ h1 {
   font-family: Arial, sans-serif;
 }
 
-/* Cuando el checkbox está marcado, mostramos las redes sociales */
 .contact-toggle:checked + .container {
-  opacity: 1; /* Hace que las redes sociales sean visibles */
-}
-
-/* medidas smartphone */
-@keyframes analitzador {
-  to {
-    scale: 1 1;
-  }
+  opacity: 1;
 }
 
 @media screen and (max-width: 480px) {
