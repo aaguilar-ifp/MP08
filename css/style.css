@@ -227,6 +227,10 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+.p3 a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
 .contact-toggle {
   display: none;
 }
