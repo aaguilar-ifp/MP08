@@ -148,6 +148,7 @@ h1 {
   }
 }
 
+
 /* ----- Página 2 ----- */
 .p2 {
   display: flex;
@@ -161,25 +162,29 @@ h1 {
 
 .p2 ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
   list-style-type: none;
   padding: 0;
 }
 
 .p2 li {
-  padding: 10px;
-  font-size: 1.25rem;
-  background: #111;
+  width: 200px;
+  height: 200px;
   margin-bottom: 10px;
-  text-align: center;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
   color: white;
   cursor: pointer;
+  text-align: center;
 }
 
 .p2 li:hover {
   background-color: blue;
 }
-
 /* ----- Página 3 ----- */
 .p3 {
   background: #dcd0ea;
