@@ -283,21 +283,35 @@ h1 {
 
 
 
-@media screen and (max-width: 480px) {
-  body {
-    background: var(--color1);
+@media screen and (max-height: 390px) {
+  .pagina {
+    min-height: 390px;
   }
 
-  h1 {
-    font-size: 1rem;
+  .p1 {
+    height: 390px;
   }
 
   .p2 li {
+    width: 120px;
+    height: 120px;
+  }
+
+  .p3 .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icon-box {
     width: 150px;
     height: 150px;
   }
-}
 
+  .contact-title {
+    font-size: 2rem;
+    padding: 10px 20px;
+  }
+}
 @media screen and (min-width: 481px) and (max-width: 1279px) {
   body {
     background: var(--color2);
