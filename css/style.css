@@ -1,4 +1,4 @@
-/* Estilos globales */
+/* Reset and global styles */
 * {
   margin: 0 auto;
   padding: 0;
@@ -8,6 +8,7 @@
 html, body {
   height: 100%;
   font-family: 'Times New Roman', Times, serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
@@ -147,24 +148,7 @@ h1 {
   }
 }
 
-/* ----- Animación de texto y rectángulo azul ----- */
-nav li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem; /* Ajusta el tamaño de texto inicial */
-  padding: 10px;
-  text-decoration: none;
-  color: white; /* Cambié el color del texto de los elementos del menú a blanco */
-  transition: transform 3s ease-in-out; /* Esto permitirá que el texto se haga pequeño */
-}
-
-/* Animación para el rectángulo azul y texto */
-nav li:hover {
-  transform: scale(0.5); /* Hace que el texto se haga más pequeño */
-}
-
-/* Página 2 */
+/* pagina 2 */
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
@@ -214,6 +198,58 @@ nav li:hover {
   height: 800%;
 }
 
+/* Añadir un nuevo cuadrado (cuarto cuadrado) */
+.p2 li:nth-child(4) {
+  width: 200px;
+  height: 200px;
+  background-color: green; /* Cambié el color por ejemplo */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.p2 li:nth-child(4):hover {
+  background-color: yellow; /* Cambié el color para el hover */
+}
+
+.p2 li:nth-child(4):hover::after {
+  width: 900%;
+  height: 800%;
+}
+
+/* Añadir animación similar si es necesario */
+@keyframes run-second {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+.p2 li:nth-child(4)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: run-second 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
 /* -------- Página 3 ----- */
 .p3 {
   background: #dcd0ea;
@@ -230,7 +266,7 @@ nav li:hover {
 .contact-title {
   font-size: 3rem;
   font-family: 'Poppins', sans-serif;
-  color: #ffffff; /* Cambié el color de "Contacte" a blanco */
+  color: #4e4e4e; /* Color de texto oscuro que combina con #dcd0ea */
   text-align: center;
   cursor: pointer;
   text-shadow: 1px 1px 2px grey;
@@ -243,32 +279,76 @@ nav li:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-/* Responsive Design para pantallas pequeñas */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 6rem;
+.p3 a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.contact-toggle {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.icon-box {
+  width: 200px;
+  height: 200px;
+  background-color: #171717;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.icon-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.icon-box:hover {
+  background-color: blue;
+}
+
+.icon-box p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: #4e4e4e; /* Color de texto para los iconos, igual que el título */
+}
+
+.contact-toggle:checked + .container {
+  opacity: 1;
+}
+
+@media screen and (max-height: 390px) {
+  .pagina {
+    min-height: 390px;
   }
 
-  nav ul {
-    grid-template-columns: 1fr;
-  }
-
-  nav li {
-    font-size: 1rem;
-    padding: 8px;
-  }
-
-  .p2 {
-    grid-template-columns: 1fr;
+  .p1 {
+    height: 390px;
   }
 
   .p2 li {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
-  .container {
+  .p3 .container {
     flex-direction: column;
+    gap: 10px;
   }
 
   .icon-box {
@@ -278,5 +358,30 @@ nav li:hover {
 
   .contact-title {
     font-size: 2rem;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+  body {
+    background: var(--color2);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background: var(--color3);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    columns: 2;
   }
 }
