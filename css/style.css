@@ -42,9 +42,9 @@ nav li {
   font-size: 1.25rem;
   padding: 10px;
   text-decoration: none;
+  color: white; /* Cambié el color del texto de los elementos del menú a blanco */
 }
 
-/* Ajuste el tamaño del texto de "Benvinguts" */
 h1 {
   padding-top: 100px;
   text-align: center;
@@ -53,8 +53,8 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 4rem; /* Cambié el tamaño del texto aquí (antes 16rem) */
+  color: white; /* Cambié el color de "Benvinguts" a blanco */
+  font-size: 16rem;
   text-shadow: 1px 1px 2px grey;
 }
 
@@ -215,7 +215,7 @@ h1 {
 .contact-title {
   font-size: 3rem;
   font-family: 'Poppins', sans-serif;
-  color: #4e4e4e; /* Color de texto oscuro que combina con #dcd0ea */
+  color: #ffffff; /* Cambié el color de "Contacte" a blanco */
   text-align: center;
   cursor: pointer;
   text-shadow: 1px 1px 2px grey;
@@ -279,4 +279,75 @@ h1 {
 
 .contact-toggle:checked + .container {
   opacity: 1;
+}
+
+/* Media Queries - Responsive Design */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 6rem; /* Reducir tamaño de fuente en móviles */
+  }
+
+  nav ul {
+    grid-template-columns: 1fr; /* Menú en una sola columna */
+  }
+
+  nav li {
+    font-size: 1rem; /* Ajustar el tamaño de fuente en los elementos del menú */
+    padding: 8px;
+  }
+
+  .p2 {
+    grid-template-columns: 1fr; /* En móviles, mostrar los elementos de la página 2 en una sola columna */
+  }
+
+  .p2 li {
+    width: 150px;
+    height: 150px; /* Ajustar tamaño de los elementos */
+  }
+
+  .container {
+    flex-direction: column; /* Colocar los iconos en columna */
+    width: 100%;
+  }
+
+  .icon-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 10rem; /* Reducir tamaño de fuente en tabletas */
+  }
+
+  .p2 {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
+  }
+
+  .p2 li {
+    width: 180px;
+    height: 180px; /* Ajuste del tamaño */
+  }
+
+  .container {
+    flex-direction: row; /* Alinear los iconos en una fila */
+    width: 80%;
+  }
+
+  .icon-box {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
 }
