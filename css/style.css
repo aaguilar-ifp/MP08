@@ -44,6 +44,7 @@ nav li {
   text-decoration: none;
 }
 
+/* Ajuste el tamaño del texto de "Benvinguts" */
 h1 {
   padding-top: 100px;
   text-align: center;
@@ -53,7 +54,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 16rem;
+  font-size: 4rem; /* Cambié el tamaño del texto aquí (antes 16rem) */
   text-shadow: 1px 1px 2px grey;
 }
 
