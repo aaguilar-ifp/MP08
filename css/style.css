@@ -55,7 +55,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* el color de "Benvinguts" a blanco */
-  font-size: 16rem;
+  font-size: 16rem; /* tamaño de fuente para pantallas grandes */
   text-shadow: 1px 1px 2px grey;
 }
 
@@ -350,5 +350,12 @@ h1 {
 
   .contact-title {
     font-size: 2.5rem;
+  }
+}
+
+/* Pantallas grandes (pantallas de escritorio) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 16rem; /* Mantener el tamaño grande en pantallas grandes */
   }
 }
