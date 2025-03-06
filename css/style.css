@@ -1,4 +1,4 @@
-/* Reset and global styles */
+/* Estilos globales */
 * {
   margin: 0 auto;
   padding: 0;
@@ -8,7 +8,6 @@
 html, body {
   height: 100%;
   font-family: 'Times New Roman', Times, serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
@@ -42,7 +41,6 @@ nav li {
   font-size: 1.25rem;
   padding: 10px;
   text-decoration: none;
-  color: white; /* Cambié el color del texto de los elementos del menú a blanco */
 }
 
 h1 {
@@ -53,7 +51,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Cambié el color de "Benvinguts" a blanco */
+  color: white;
   font-size: 16rem;
   text-shadow: 1px 1px 2px grey;
 }
@@ -149,7 +147,24 @@ h1 {
   }
 }
 
-/* pagina 2 */
+/* ----- Animación de texto y rectángulo azul ----- */
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Ajusta el tamaño de texto inicial */
+  padding: 10px;
+  text-decoration: none;
+  color: white; /* Cambié el color del texto de los elementos del menú a blanco */
+  transition: transform 3s ease-in-out; /* Esto permitirá que el texto se haga pequeño */
+}
+
+/* Animación para el rectángulo azul y texto */
+nav li:hover {
+  transform: scale(0.5); /* Hace que el texto se haga más pequeño */
+}
+
+/* Página 2 */
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
@@ -228,88 +243,32 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-.p3 a {
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-}
-
-.contact-toggle {
-  display: none;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 20px;
-  transition: opacity 0.5s ease;
-  opacity: 0;
-}
-
-.icon-box {
-  width: 200px;
-  height: 200px;
-  background-color: #171717;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  box-sizing: border-box;
-}
-
-.icon-box img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
-.icon-box:hover {
-  background-color: blue;
-}
-
-.icon-box p {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-  color: #4e4e4e; /* Color de texto para los iconos, igual que el título */
-}
-
-.contact-toggle:checked + .container {
-  opacity: 1;
-}
-
-/* Media Queries - Responsive Design */
-
-/* Pantallas pequeñas (móviles) */
+/* Responsive Design para pantallas pequeñas */
 @media (max-width: 600px) {
   h1 {
-    font-size: 6rem; /* Reducir tamaño de fuente en móviles */
+    font-size: 6rem;
   }
 
   nav ul {
-    grid-template-columns: 1fr; /* Menú en una sola columna */
+    grid-template-columns: 1fr;
   }
 
   nav li {
-    font-size: 1rem; /* Ajustar el tamaño de fuente en los elementos del menú */
+    font-size: 1rem;
     padding: 8px;
   }
 
   .p2 {
-    grid-template-columns: 1fr; /* En móviles, mostrar los elementos de la página 2 en una sola columna */
+    grid-template-columns: 1fr;
   }
 
   .p2 li {
     width: 150px;
-    height: 150px; /* Ajustar tamaño de los elementos */
+    height: 150px;
   }
 
   .container {
-    flex-direction: column; /* Colocar los iconos en columna */
-    width: 100%;
+    flex-direction: column;
   }
 
   .icon-box {
@@ -319,35 +278,5 @@ h1 {
 
   .contact-title {
     font-size: 2rem;
-  }
-}
-
-/* Pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 10rem; /* Reducir tamaño de fuente en tabletas */
-  }
-
-  .p2 {
-    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
-  }
-
-  .p2 li {
-    width: 180px;
-    height: 180px; /* Ajuste del tamaño */
-  }
-
-  .container {
-    flex-direction: row; /* Alinear los iconos en una fila */
-    width: 80%;
-  }
-
-  .icon-box {
-    width: 180px;
-    height: 180px;
-  }
-
-  .contact-title {
-    font-size: 2.5rem;
   }
 }
