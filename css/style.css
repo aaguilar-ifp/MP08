@@ -43,19 +43,24 @@ nav li {
   padding: 10px;
   text-decoration: none;
   color: white; /* Cambié el color del texto de los elementos del menú a blanco */
-  transition: transform 3s ease-in-out; /* Esto permitirá que el texto se haga pequeño */
 }
 
-/* Animación para el rectángulo azul y texto */
-nav li:hover {
-  transform: scale(0.5); /* Hace que el texto se haga más pequeño */
+h1 {
+  padding-top: 100px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Cambié el color de "Benvinguts" a blanco */
+  font-size: 16rem;
+  text-shadow: 1px 1px 2px grey;
 }
 
-/* No mover texto en pantallas grandes */
-@media (min-width: 601px) {
-  nav li {
-    transition: none; /* Se elimina la animación para pantallas más grandes */
-  }
+.pagina {
+  position: relative;
+  height: 100%;
 }
 
 /* ----- Página 1 ----- */
@@ -291,7 +296,6 @@ nav li:hover {
   nav li {
     font-size: 1rem; /* Ajustar el tamaño de fuente en los elementos del menú */
     padding: 8px;
-    transition: transform 0.3s ease-in-out; /* Agregar animación para móviles */
   }
 
   .p2 {
