@@ -44,18 +44,33 @@ nav li {
   text-decoration: none;
 }
 
+h1 {
+  padding-top: 100px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16rem;
+  text-shadow: 1px 1px 2px grey;
+}
+
 .pagina {
   position: relative;
   height: 100%;
 }
 
-/* Página 1 */
+/* ----- Página 1 ----- */
 .p1 {
   display: table;
   width: 100%;
   background-color: #171717;
-  color: white;
-  text-align: center;
+  color: #000;
+  line-height: 1.6rem;
+  font-family: sans-serif;
+  overflow: hidden;
   height: 700px;
 }
 
@@ -76,9 +91,64 @@ nav li {
   top: 0;
   left: 50%;
   background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
-/* Página 2 */
+.p1 .lines .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  -webkit-animation: run 7s 0s infinite;
+  animation: run 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.p1 .lines .line:nth-child(1) {
+  margin-left: -25%;
+}
+
+.p1 .lines .line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.p1 .lines .line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.p1 .lines .line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+/* pagina 2 */
 .p2 {
   background: linear-gradient(#171717, #93d6cb, #dcd0ea);
   display: grid;
@@ -98,6 +168,10 @@ nav li {
   display: contents;
 }
 
+.p2 a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
 .p2 li {
   width: 200px;
   height: 200px;
@@ -109,42 +183,108 @@ nav li {
   text-align: center;
   font-family: Arial, sans-serif;
   border-radius: 10px;
+  position: relative;
   padding: 20px;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
-}
-
-/* Agregar dos nuevos cuadrados */
-.p2 li:nth-last-child(2), .p2 li:nth-last-child(1) {
-  background-color: green;
 }
 
 .p2 li:hover {
   background-color: blue;
 }
 
-/* Página 3 */
+.p2 li:hover::after {
+  width: 900%;
+  height: 800%;
+}
+
+/* Añadir un nuevo cuadrado (cuarto cuadrado) */
+.p2 li:nth-child(4) {
+  width: 200px;
+  height: 200px;
+  background-color: green; /* Cambié el color por ejemplo */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.p2 li:nth-child(4):hover {
+  background-color: yellow; /* Cambié el color para el hover */
+}
+
+.p2 li:nth-child(4):hover::after {
+  width: 900%;
+  height: 800%;
+}
+
+/* Añadir animación similar si es necesario */
+@keyframes run-second {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+.p2 li:nth-child(4)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: run-second 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* -------- Página 3 ----- */
 .p3 {
   background: #dcd0ea;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* los elementos se alineen de arriba a abajo */
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
-  min-height: 100vh;
+  min-height: 100vh; /* Asegura que la página tenga al menos el tamaño de la pantalla */
 }
 
 .contact-title {
   font-size: 3rem;
   font-family: 'Poppins', sans-serif;
-  color: #4e4e4e;
+  color: #4e4e4e; /* Color de texto oscuro que combina con #dcd0ea */
   text-align: center;
+  cursor: pointer;
   text-shadow: 1px 1px 2px grey;
-  background-color: #b0a7d8;
-  padding: 20px 40px;
-  border-radius: 15px;
+  margin-bottom: 20px; /* Espacio debajo del título */
+  
+  /* Estilos para el rectángulo */
+  background-color: #b0a7d8; /* Color de fondo suave */
+  padding: 20px 40px; /* Espaciado dentro del rectángulo */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.p3 a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.contact-toggle {
+  display: none;
 }
 
 .container {
@@ -152,6 +292,8 @@ nav li {
   justify-content: space-around;
   width: 100%;
   margin-top: 20px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
 }
 
 .icon-box {
@@ -164,6 +306,8 @@ nav li {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .icon-box img {
@@ -176,45 +320,68 @@ nav li {
   background-color: blue;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .p2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .p2 li {
-    width: 150px;
-    height: 150px;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .icon-box {
-    width: 150px;
-    height: 150px;
-  }
+.icon-box p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: #4e4e4e; /* Color de texto para los iconos, igual que el título */
 }
 
-@media screen and (max-width: 480px) {
-  .p2 {
-    grid-template-columns: repeat(1, 1fr);
+.contact-toggle:checked + .container {
+  opacity: 1;
+}
+
+@media screen and (max-height: 390px) {
+  .pagina {
+    min-height: 390px;
+  }
+
+  .p1 {
+    height: 390px;
   }
 
   .p2 li {
     width: 120px;
     height: 120px;
+  }
+
+  .p3 .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icon-box {
+    width: 150px;
+    height: 150px;
   }
 
   .contact-title {
     font-size: 2rem;
     padding: 10px 20px;
   }
+}
 
-  .icon-box {
-    width: 120px;
-    height: 120px;
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+  body {
+    background: var(--color2);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background: var(--color3);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    columns: 2;
   }
 }
